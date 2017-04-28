@@ -20,7 +20,7 @@ import ua.com.shop.service.MailSenderService;
 public class MailSenderServiceImpl implements MailSenderService {
 	
 	 private final static String USERNAME = "artinazvarich@gmail.com";// назва почти з якої буде розсилка
-	    private final static String PASSWORD = "CoL98Alpha61";// пароль до цієї почти
+	    private final static String PASSWORD = "*******************";// пароль до цієї почти
 
 	    @Async
 	    public void sendMail(String theme, String mailBody, String email) {
