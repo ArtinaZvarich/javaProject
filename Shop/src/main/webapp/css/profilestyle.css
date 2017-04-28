@@ -1,0 +1,41 @@
+body{
+	background-color: ghostwhite;
+ }
+ 
+.update a{
+	color: darkred;
+	font-size: 14pt;
+	font-family: impact;
+	
+}
+
+.all{
+	margin: 30px 0px 0px 510px;
+}
+
+.name{
+	position: relative;
+	color: darkred;
+	font-size: 20pt;
+	left: 70px;
+	font-family: impact;
+}
+
+.purh{
+	margin: 0px 0px 0px 510px;	
+	font-size: 20pt;
+	font-family: century gothic;
+	color: darkred;
+	
+}
+
+.shop {
+	margin: 0px 0px 0px 810px;	
+	font-size: 11pt;
+	font-family: arial black;
+	
+}
+
+.shop a{
+	font-family: arial black;	
+}

@@ -1,0 +1,41 @@
+body
+{
+	background-attachment: fixed;
+	background-position: center;
+	background-image: url('http://cdn.wallpapersafari.com/99/11/Rsl74p.png');
+	padding: 0px;
+}
+
+.animate
+{
+	transition: all 0.1s;
+	-webkit-transition: all 0.1s;
+}
+
+.action-button
+{
+	position: relative;
+	padding: 10px 40px;
+  	margin: 0px 10px 10px 0px;
+ 	float: left;
+ 	border: 0.5px solid #400040; 
+	font-family: tempus sans itc;
+	font-size: 25px;
+	color: #400040;
+	text-decoration: none;	
+}
+
+.btn
+{
+	background-color: #e0d8fc;
+	bo
+	text-shadow: 0px -2px #160835;
+}
+
+.action-button:active
+{
+	transform: translate(0px,5px);
+  -webkit-transform: translate(0px,5px);
+	border-bottom: 1px solid;
+}
+

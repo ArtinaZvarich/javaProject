@@ -1,0 +1,46 @@
+package ua.com.shop.validator;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import ua.com.shop.validator.Validator;
+import ua.com.shop.dao.UserDao;
+import ua.com.shop.entity.User;
+import ua.com.shop.validator.UserValidationException;
+import ua.com.shop.validator.UserValidationMessages;
+
+@Component("userValidator")
+public class UserValidator implements Validator {
+	
+	@Autowired
+	private UserDao userDao;
+
+	public void validate(Object object) throws Exception {
+		User user = (User) object;
+		
+		if(user.getName().isEmpty()){
+			throw new UserValidationException(UserValidationMessages.EMPTY_USERNAME_FIELD);
+		}
+		if(userDao.findByName(user.getName()) != null){
+			throw new UserValidationException(UserValidationMessages.NAME_ALREADY_EXIST);
+		}
+		if(userDao.userExistsByEmail(user.getEmail())){
+			throw new UserValidationException(UserValidationMessages.EMAIL_ALREADY_EXIST);
+		}
+		if(user.getEmail().isEmpty()){
+			throw new UserValidationException(UserValidationMessages.EMPTY_EMAIl_FIELD);
+		}
+		if(user.getPassword().isEmpty()){
+			throw new UserValidationException(UserValidationMessages.EMPTY_PASSWORD_FIELD);
+		}
+		if(user.getPhone().isEmpty()){
+			throw new UserValidationException(UserValidationMessages.EMPTY_PHONE_FIELD);
+		}
+		if(userDao.findByPhone(user.getPhone()) != null){
+			throw new UserValidationException(UserValidationMessages.PHONE_ALREADY_EXIST);
+		}
+
+	}
+	
+
+}
